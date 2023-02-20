@@ -20,6 +20,7 @@ console.log(shuffledDeck);
 var currentCard = 0;
 
 
+
  // Hide all the divs
 function displayCard(){
     for (let i = 0; i < shuffledDeck.length; i++){
@@ -34,7 +35,7 @@ function displayCard(){
     } else {
         // Show the current div
         shuffledDeck[currentCard].style.display = 'block';
-        shuffledDeck[currentCard].style.maxWidth = '250px';
+       // shuffledDeck[currentCard].style.maxWidth = '250px';
         currentCard++;
     }
 }
