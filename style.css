@@ -1,0 +1,236 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./cards/background.jpg);
+    background-size: cover;
+    color: aliceblue;
+}
+
+.container {
+    margin: 3rem;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.green{
+    box-shadow: 0 0 5px 5px green;
+}
+
+.red{
+    box-shadow: 0 0 5px 5px red;
+}
+
+.btn{
+    width: 150px;
+    height: 75px;
+    background-color: #edf5ef00;
+    border: 3px solid black;
+    text-transform: uppercase;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+h1{
+    text-align: center;
+    margin-top: 2rem;
+
+}
+
+.card{
+    max-width: 100px;
+    margin: 0.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+/* CLUB */
+#cardc2{
+    content: url(./cards/club/2.svg);
+}
+#cardc3{
+    content: url(./cards/club/3.svg);
+
+}
+#cardc4{
+    content: url(./cards/club/4.svg);
+
+}
+#cardc5{
+    content: url(./cards/club/5.svg);
+
+}
+#cardc6{
+    content: url(./cards/club/6.svg);
+
+}
+#cardc7{
+    content: url(./cards/club/7.svg);
+
+}
+#cardc8{
+    content: url(./cards/club/8.svg);
+
+}
+#cardc9{
+    content: url(./cards/club/9.svg);
+
+}
+#cardc10{
+    content: url(./cards/club/10.svg);
+
+}
+#cardcJ{
+    content: url(./cards/club/J.svg);
+
+}
+#cardcQ{
+    content: url(./cards/club/Q.svg);
+
+}
+#cardcK{
+    content: url(./cards/club/K.svg);
+
+}
+#cardcA{
+    content: url(./cards/club/A.svg);
+
+}
+
+/* DIAMOND */
+
+#cardd2{
+    content: url(./cards/diamond/2.svg);
+}
+#cardd3{
+    content: url(./cards/diamond/3.svg);
+}
+#cardd4{
+    content: url(./cards/diamond/4.svg);
+}
+#cardd5{
+    content: url(./cards/diamond/5.svg);
+}
+#cardd6{
+    content: url(./cards/diamond/6.svg);
+}
+#cardd7{
+    content: url(./cards/diamond/7.svg);
+}
+#cardd8{
+    content: url(./cards/diamond/8.svg);
+}
+#cardd9{
+    content: url(./cards/diamond/9.svg);
+}
+#cardd10{
+    content: url(./cards/diamond/10.svg);
+}
+#carddJ{
+    content: url(./cards/diamond/J.svg);
+}
+#carddQ{
+    content: url(./cards/diamond/Q.svg);
+}
+#carddK{
+    content: url(./cards/diamond/K.svg);
+}
+#carddA{
+    content: url(./cards/diamond/A.svg);
+}
+
+/* HEART */
+
+#cardh2{
+    content: url(./cards/heart/2.svg);
+}
+#cardh3{
+    content: url(./cards/heart/3.svg);
+}
+#cardh4{
+    content: url(./cards/heart/4.svg);
+}
+#cardh5{
+    content: url(./cards/heart/5.svg);
+}
+#cardh6{
+    content: url(./cards/heart/6.svg);
+}
+#cardh7{
+    content: url(./cards/heart/7.svg);
+}
+#cardh8{
+    content: url(./cards/heart/8.svg);
+}
+#cardh9{
+    content: url(./cards/heart/9.svg);
+}
+#cardh10{
+    content: url(./cards/heart/10.svg);
+}
+#cardhJ{
+    content: url(./cards/heart/J.svg);
+}
+#cardhQ{
+    content: url(./cards/heart/Q.svg);
+}
+#cardhK{
+    content: url(./cards/heart/K.svg);
+}
+#cardhA{
+    content: url(./cards/heart/A.svg);
+}
+
+/* SPADE */
+
+#cards2{
+    content: url(./cards/spade/2.svg);
+}
+#cards3{
+    content: url(./cards/spade/3.svg);
+}
+#cards4{
+    content: url(./cards/spade/4.svg);
+}
+#cards5{
+    content: url(./cards/spade/5.svg);
+}
+#cards6{
+    content: url(./cards/spade/6.svg);
+}
+#cards7{
+    content: url(./cards/spade/7.svg);
+}
+#cards8{
+    content: url(./cards/spade/8.svg);
+}
+#cards9{
+    content: url(./cards/spade/9.svg);
+}
+#cards10{
+    content: url(./cards/spade/10.svg);
+}
+#cardsJ{
+    content: url(./cards/spade/J.svg);
+}
+#cardsQ{
+    content: url(./cards/spade/Q.svg);
+}
+#cardsK{
+    content: url(./cards/spade/K.svg);
+}
+#cardsA{
+    content: url(./cards/spade/A.svg);
+}
