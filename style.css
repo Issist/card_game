@@ -80,6 +80,7 @@ body{
   
 #slider{
   -webkit-appearance: none;
+  appearance: none;
   height: 3px;
   background: #fff;
   opacity: 0.7;
