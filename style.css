@@ -15,10 +15,10 @@ body{
 }
 
 .header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2rem;
+    justify-items: center;
 }
 
 .header .btn_restart{
@@ -137,13 +137,13 @@ body{
 
 /* CARDS */
 .card{
-    max-width: 100px;
     margin: 0.5rem;
     display: none;
     cursor: pointer;
     background-color: rgb(248, 252, 250);
     border-radius: 10px;
     max-width: 250px;
+    /* pointer-events: none; */
 }
 
 /* CLUB */

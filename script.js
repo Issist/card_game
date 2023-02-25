@@ -1,7 +1,6 @@
 let btn_start = document.querySelector('.btn_start');
 let btn_next = document.querySelector('.btn_next');
 let btn_restart = document.querySelector('.btn_restart');
-/* let gameover_image = document.getElementById('gameover_img'); */
 let gameover = document.querySelector('.modal');
 
 //RANGESLIDER
@@ -41,7 +40,7 @@ btn_start.addEventListener('click', () => {
     btn_next.style.display = 'flex';
     slider.style.display = 'none';
     btn_restart.style.display = 'block';
-
+    valueDisplay.style.display = 'none';
     // Hide all the divs
     function displayCard(){
         for (let i = 0; i < shuffledDeck.length; i++){
@@ -50,9 +49,17 @@ btn_start.addEventListener('click', () => {
         
         if (currentCard >= shuffledDeck.length){
             for (let i = 0; i < shuffledDeck.length; i++){
-                shuffledDeck[i].style.display = 'block ';
-                shuffledDeck[i].style.maxWidth = '150px';
-                btn_next.style.display = 'none';
+                var w = document.documentElement.clientWidth || window.innerWidth;
+                if(w<=480){
+                    shuffledDeck[i].style.display = 'block ';
+                    shuffledDeck[i].style.maxWidth = '60px';
+                    btn_next.style.display = 'none';
+                }else{
+                    shuffledDeck[i].style.display = 'block ';
+                    shuffledDeck[i].style.maxWidth = '120px';
+                    btn_next.style.display = 'none';
+
+                }
             }
         } else {
             // Show the current div
@@ -113,7 +120,7 @@ btn_restart.addEventListener('click', () => {
         }, 1000); 
         
 })
-
+//MOBILE SIZE
 
 //PRELOAD
 var images = [];
