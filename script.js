@@ -1,3 +1,9 @@
+let btn_start = document.querySelector('.btn_start');
+let btn_next = document.querySelector('.btn_next');
+let btn_restart = document.querySelector('.btn_restart');
+/* let gameover_image = document.getElementById('gameover_img'); */
+let gameover = document.querySelector('.modal');
+
 //RANGESLIDER
 var slider = document.getElementById("slider");
 var valueDisplay = document.getElementById("valueDisplay");
@@ -13,8 +19,6 @@ var cards = document.querySelectorAll("div[id^='card']");
 // Convert the NodeList to an array
 var deck = Array.from(cards);
 
-
-
 // Shuffle function
 function shuffleDeck(deck) {
     for(let i = deck.length - 1; i > 0; i--) {
@@ -25,9 +29,6 @@ function shuffleDeck(deck) {
 }
 
 //START GAME
-let btn_start = document.querySelector('.btn_start');
-let btn_next = document.querySelector('.btn_next');
-
 btn_start.addEventListener('click', () => {
     // Shuffle the div elements
     var shuffledDeck = shuffleDeck(deck).slice(52-slider.value);
@@ -38,6 +39,8 @@ btn_start.addEventListener('click', () => {
     //Hide start button show next button
     btn_start.style.display = 'none';
     btn_next.style.display = 'flex';
+    slider.style.display = 'none';
+    btn_restart.style.display = 'block';
 
     // Hide all the divs
     function displayCard(){
@@ -59,9 +62,9 @@ btn_start.addEventListener('click', () => {
     }
     displayCard();
     //Button next card
-    //let button = document.querySelector('.btn');
     btn_next.addEventListener('click', () => {
         displayCard();
+        title.textContent = "Let's check your memory";
     });
 
     //errors number
@@ -79,26 +82,37 @@ btn_start.addEventListener('click', () => {
                 this.classList.add('green');
                 this.classList.remove('red');
                 this.style.pointerEvents = "none";
-                title.textContent = "Let's check your memory";
                 if(currentIndex >= shuffledDeck.length){
                     title.textContent = "Done! Play again after 3s :)";
                     setTimeout(() => {
                       location.reload();  
-                    }, 3000);
-                    
+                    }, 3000);                   
                 }
             }else{
                 this.classList.add('red');
                 errorsScore++;
                 errors_span.innerHTML = errorsScore;
-            }
-        })
+                if(errorsScore === 3){                    
+                    gameover.style.display = 'block';   
+                    gameover.innerHTML = 'GAME OVER!!!<br>Try better next time.<br><img id="gameover_img" src="./cards/gameover.png">';
+                    setTimeout(() => {
+                        location.reload();  
+                        }, 2000); 
+                }}
+        });
     });
 });
 
 
-
-
+//RESTART GAME
+btn_restart.addEventListener('click', () => {
+    gameover.style.display = 'block';
+    gameover.innerHTML = 'Oh, here we go again<br><img id="gameover_img" src="./cards/restart.jpg">';
+    setTimeout(() => {
+        location.reload();  
+        }, 1000); 
+        
+})
 
 
 //PRELOAD

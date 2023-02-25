@@ -18,17 +18,40 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 2rem;
+    margin: 5rem auto;
 }
 
-/* h1{
-    word-wrap: break-word;
-    text-align: center;
-    margin-top: 2rem;
-} */
+.header .btn_restart{
+    display: none;
+    position: unset;
+}
+
 
 .errors{
     margin-top: 0.3rem;
+}
+
+.modal{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: black;
+    width: 500px;
+    max-width: 80%;
+    padding: 2rem;
+    text-align: center;
+    display: none;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#gameover_img{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .container {
@@ -64,7 +87,10 @@ body{
     font-size: 1.6rem;
     cursor: pointer;
     user-select: none;
+    color: #fff;
 }
+
+
 
 .btn_next{
     display: none;
